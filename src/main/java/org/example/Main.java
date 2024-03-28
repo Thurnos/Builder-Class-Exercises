@@ -4,43 +4,63 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.function.Function;
 
 
 public class Main {
     public static void main(String[] args) {
 
-        int a = 5;
-        Function<Integer, Integer> lambda = (x) -> a + x;
 
-        int result = lambda.apply(10); // Applying the lambda expression to the argument 10
-        System.out.println("Result: " + result); // Output: Result: 15
+        Date date = new Date(123, 5, 7);
+        Book book1 = new Book("Ivan",12,234,"Da",date);
+        Book book2 = new Book("Ivan1",12,234,"Da",date);
+        Book book3 = new Book("Ivan2",12,234,"Da",date);
+        List<Book> books = new ArrayList<>();
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+
+        Book.printAll(books);
+
+        List<Integer> integers = new ArrayList<>();
+        integers.add(3);
+        integers.add(4);
+        integers.add(5);
+        integers.add(6);
+        integers.add(7);
+
+        PrintAll.printAll(integers);
 
 
-        File myfile = new File("C:\\Users\\Svilen-PC\\Desktop\\mathi//myFile.txt");
-        try{
-            myfile.createNewFile();
-        }catch (IOException ioe){
 
-        }
-
-
-
-
-        new File("myDir").mkdir();
-
-
-        FilenameFilter filter= (file,fileName) ->{
-            return fileName.contains(".");
-        };
-        String[] contents = new File(".").list(filter);
-        for(String file:contents){
-            System.out.println(file);
-        }
+//        int a = 5;
+//        Function<Integer, Integer> lambda = (x) -> a + x;
+//
+//        int result = lambda.apply(10); // Applying the lambda expression to the argument 10
+//        System.out.println("Result: " + result); // Output: Result: 15
+//
+//
+//        File myfile = new File("C:\\Users\\Svilen-PC\\Desktop\\mathi//myFile.txt");
+//        try{
+//            myfile.createNewFile();
+//        }catch (IOException ioe){
+//
+//        }
+//
+//
+//
+//
+//        new File("myDir").mkdir();
+//
+//
+//        FilenameFilter filter= (file,fileName) ->{
+//            return fileName.contains(".");
+//        };
+//        String[] contents = new File(".").list(filter);
+//        for(String file:contents){
+//            System.out.println(file);
+//        }
 //        Book book2 = new Book("Ivan",24);
 //        Book book3 = new Book("Ivan",25);
 //        Book book4 = new Book("Ivan",26);

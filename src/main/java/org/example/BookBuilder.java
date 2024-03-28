@@ -43,4 +43,15 @@ public class BookBuilder implements BookInt {
     public Book createBook() {
         return new Book(name, pages, vin, materialType, production);
     }
+
+    @Override
+    public String toString() {
+        return "BookBuilder{" +
+                "name='" + name + '\'' +
+                ", pages=" + pages +
+                ", vin=" + vin +
+                ", materialType='" + materialType + '\'' +
+                ", production=" + production +
+                '}';
+    }
 }
